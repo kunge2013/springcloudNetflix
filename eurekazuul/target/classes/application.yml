@@ -1,0 +1,85 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+    register-with-eureka: true
+    
+  instance:
+    status-page-url: ${server.servletPath}/info
+    home-page-url: ${server.servletPath}/health
+    
+spring:
+  application:
+    name: zuul
+
+server:
+  port: 7793     
+
+## actuator/health
+management:
+  endpoint:
+    health:
+      show-details: always 
+  endpoints:
+    web:
+      exposure:
+## 暴露actuator 监控包服务下的  所有http 接口
+        include: "*"
+  ## 日志级别设置  
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG
+    
+    
+    
+# 路由控制，后续详解
+zuul:
+## The result can be different than the original input 
+## if it was encoded using Javascript’s encodeURIComponent() method for example.
+##  While this causes no issues in most cases, 
+## some web servers can be picky with the encoding of complex query string.
+  force-original-query-string-encoding: false
+##如果使用requestURI RequestContext属性覆盖请求URI，并且此标志设置为false，则将不对在请求上下文中设置的URL进行编码。 确保URL已被编码是您的责任。 
+  decode-url: false
+  routes:
+    eurekaclient: 
+      path: /eurekaclient/**
+      service-id: eurekaclient
+      ## 服务见
+      sensitive-headers: 
+    ## 访问 baidu 重定向到  eurekaclient服务
+    baidu:
+      path: /baidu/**
+      url: http://www.baidu.com
+    ## 本地页面访问
+    home:
+      path: /home/**
+      url: forward:/home
+    eurekaclient2: 
+      path: /eurekaclient2/**
+      service-id: eurekaclient2
+      sensitive-headers: Cookie,Set-Cookie,Authorization,Host,User-Agent
+    hystrix: 
+      path: /hystrix/hystrix
+      service-id:  HYSTRIX
+      sensitive-headers: Cookie,Set-Cookie,Authorization,Host,User-Agent
+    hystrixturbine: 
+      path: /hystrixturbine/**
+      service-id: HYSTRIXTURBINE
+      sensitive-headers: Cookie,Set-Cookie,Authorization,Host,User-Agent
+    ## 文件服务配置
+    file: 
+      path: /file/**
+      service-id: eurekafile  
+      sensitive-headers: 
+
+## 配置客户httpclient 类型支持  OkHttpClient 和 RestClient      
+ribbon:
+# 启用Ribbon的RestClient
+  restclient:
+    enabled: false
+# 启用OkHttpClient
+  okhttp:
+    enabled: true
+      

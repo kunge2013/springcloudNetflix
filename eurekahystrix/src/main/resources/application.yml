@@ -1,0 +1,33 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+    register-with-eureka: true
+#  instance:
+#     status-page-url: ${server.servletPath}/infohystrix
+#     home-page-url: ${server.servletPath}/healthhystrix
+    
+spring:
+  application:
+    name: hystrix
+
+server:
+  port: 7789     
+
+## actuator/health
+management:
+  endpoint:
+    health:
+      show-details: always 
+## 使用Hystrix Metrics Stream必备 
+  endpoints:
+    web:
+      exposure:
+        include:  hystrix.stream
+        
+
+  ## 日志级别设置  
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG        
