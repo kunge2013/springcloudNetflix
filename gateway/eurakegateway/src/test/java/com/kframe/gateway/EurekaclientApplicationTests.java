@@ -1,4 +1,4 @@
-package com.kframe.eurekaclient;
+package com.kframe.gateway;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;

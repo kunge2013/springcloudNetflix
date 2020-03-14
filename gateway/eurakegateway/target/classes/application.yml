@@ -16,11 +16,19 @@ spring:
     name: eurekaclient
     
 server:
-  port: 8081  
+  port: 5001  
  
  
   ## 日志级别设置  
 logging:
   level:
     ROOT: INFO
-    org.springframework.web: DEBUG 
+    org.springframework.cloud.gateway: DEBUG 
+
+### 显示所有监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include:  '*'
+    
