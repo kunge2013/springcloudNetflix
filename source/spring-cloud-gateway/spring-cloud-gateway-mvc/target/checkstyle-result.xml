@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.18">
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-mvc/src/main/java/org/springframework/cloud/gateway/mvc/ProxyExchange.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-mvc/src/main/java/org/springframework/cloud/gateway/mvc/config/ProxyProperties.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-mvc/src/main/java/org/springframework/cloud/gateway/mvc/config/ProxyExchangeArgumentResolver.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-mvc/src/main/java/org/springframework/cloud/gateway/mvc/config/ProxyResponseAutoConfiguration.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-mvc/src/test/java/org/springframework/cloud/gateway/mvc/ProductionConfigurationTests.java">
+</file>
+</checkstyle>

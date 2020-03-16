@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.18">
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-webflux/src/main/java/org/springframework/cloud/gateway/webflux/ProxyExchange.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-webflux/src/main/java/org/springframework/cloud/gateway/webflux/config/ProxyProperties.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-webflux/src/main/java/org/springframework/cloud/gateway/webflux/config/ProxyExchangeArgumentResolver.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-webflux/src/main/java/org/springframework/cloud/gateway/webflux/config/ProxyResponseAutoConfiguration.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-webflux/src/test/java/org/springframework/cloud/gateway/webflux/ProductionConfigurationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-webflux/src/test/java/org/springframework/cloud/gateway/webflux/ReactiveTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-webflux/src/test/resources/application.properties">
+</file>
+</checkstyle>

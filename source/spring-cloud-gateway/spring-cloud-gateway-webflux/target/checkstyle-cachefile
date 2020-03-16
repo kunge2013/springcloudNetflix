@@ -1,0 +1,12 @@
+#Mon Mar 16 10:09:24 CST 2020
+/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-webflux/src/main/java/org/springframework/cloud/gateway/webflux/config/ProxyExchangeArgumentResolver.java=1584323210000
+/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-webflux/src/main/java/org/springframework/cloud/gateway/webflux/ProxyExchange.java=1584323210000
+module-resource*?\:file\:/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-webflux/target/checkstyle-header.txt=C87D51DF1E623E1FB90FB3C11AFB37C516E4539F
+/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-webflux/src/test/java/org/springframework/cloud/gateway/webflux/ProductionConfigurationTests.java=1584323210000
+module-resource*?\:https\://raw.githubusercontent.com/spring-cloud/spring-cloud-build/master/spring-cloud-build-tools/src/checkstyle/checkstyle-suppressions.xml=62D62A9E744552A9A0DCFDFD1A7EE6BFFF7B9FB1
+/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-webflux/src/main/java/org/springframework/cloud/gateway/webflux/config/ProxyResponseAutoConfiguration.java=1584323210000
+/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-webflux/src/main/java/org/springframework/cloud/gateway/webflux/config/ProxyProperties.java=1584323210000
+module-resource*?\:/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/src/checkstyle/checkstyle-suppressions.xml=CD8F2E13488E0FEA474432620951DC2428811D74
+/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-webflux/src/test/resources/application.properties=1584323210000
+/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-webflux/src/test/java/org/springframework/cloud/gateway/webflux/ReactiveTests.java=1584323210000
+configuration*?=DF0A9E69596017EA4EB7C90E1207E42B485492E6

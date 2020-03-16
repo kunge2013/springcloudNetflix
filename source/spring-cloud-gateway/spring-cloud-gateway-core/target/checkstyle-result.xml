@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.18">
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/predicate/MethodRoutePredicateFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/predicate/BetweenRoutePredicateFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/predicate/PredicateDefinition.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/predicate/RemoteAddrRoutePredicateFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/predicate/GatewayPredicate.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/predicate/QueryRoutePredicateFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/predicate/HostRoutePredicateFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/predicate/AfterRoutePredicateFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/predicate/PathRoutePredicateFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/predicate/CookieRoutePredicateFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/predicate/AbstractRoutePredicateFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/predicate/CloudFoundryRouteServiceRoutePredicateFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/predicate/BeforeRoutePredicateFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/predicate/RoutePredicateFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/predicate/ReadBodyPredicateFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/predicate/HeaderRoutePredicateFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/predicate/WeightRoutePredicateFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/FilteringWebHandler.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/AsyncPredicate.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/handler/RoutePredicateHandlerMapping.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/actuate/AbstractGatewayControllerEndpoint.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/actuate/GatewayLegacyControllerEndpoint.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/actuate/GatewayControllerEndpoint.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/StringToZonedDateTimeConverter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/ipresolver/RemoteAddressResolver.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/ipresolver/XForwardedRemoteAddressResolver.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/NotFoundException.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/AbstractStatefulConfigurable.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/ServiceUnavailableException.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/DefaultServerRequest.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/ServerWebExchangeUtils.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/DelegatingServiceInstance.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/StatefulConfigurable.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/AbstractConfigurable.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/DefaultServerResponse.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/Configurable.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/HasRouteId.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/TimeoutException.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/WeightConfig.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/ConfigurationService.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/ShortcutConfigurable.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/tagsprovider/PropertiesTagsProvider.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/tagsprovider/GatewayTagsProvider.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/tagsprovider/GatewayHttpTagsProvider.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/tagsprovider/GatewayRouteTagsProvider.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/BodyInserterContext.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/ConfigurationUtils.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/GatewayToStringStyler.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/DefaultClientResponse.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/RouteMetadataUtils.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/NameUtils.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/support/HttpStatusHolder.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/discovery/GatewayDiscoveryClientAutoConfiguration.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/discovery/DiscoveryLocatorProperties.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/discovery/DiscoveryClientRouteDefinitionLocator.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/GlobalFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/ratelimit/RateLimiter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/ratelimit/AbstractRateLimiter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/ratelimit/KeyResolver.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/ratelimit/RedisRateLimiter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/ratelimit/PrincipalNameKeyResolver.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/NettyWriteResponseFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/RemoveCachedBodyFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/ForwardPathFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/WebClientWriteResponseFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/OrderedGatewayFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/ForwardRoutingFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/GatewayMetricsFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/LoadBalancerClientFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/ReactiveLoadBalancerClientFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/NettyRoutingFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/GatewayFilterChain.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/WeightCalculatorWebFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/WebClientHttpRoutingFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/FilterDefinition.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/WebsocketRoutingFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/headers/ForwardedHeadersFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/headers/HttpHeadersFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/headers/RemoveHopByHopHeadersFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/headers/XForwardedHeadersFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/GatewayFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/DedupeResponseHeaderGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/RequestHeaderSizeGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/RedirectToGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/RequestRateLimiterGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/RetryGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/RemoveRequestHeaderGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/SpringCloudCircuitBreakerFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/FallbackHeadersGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/AbstractNameValueGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/SpringCloudCircuitBreakerResilience4JFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/RemoveResponseHeaderGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/SetStatusGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/RequestHeaderToRequestUriGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/SetResponseHeaderGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/AddRequestParameterGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/SetPathGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/AbstractGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/MapRequestHeaderGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/SecureHeadersGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/PrefixPathGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/RewriteLocationResponseHeaderGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/rewrite/MessageBodyDecoder.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/rewrite/MessageBodyEncoder.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/rewrite/GzipMessageBodyResolver.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/rewrite/ModifyRequestBodyGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/rewrite/CachedBodyOutputMessage.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/rewrite/HttpMessageWriterResponse.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/rewrite/ModifyResponseBodyGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/rewrite/RewriteFunction.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/SaveSessionGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/RemoveRequestParameterGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/AddRequestHeaderGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/SetRequestHeaderGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/PreserveHostHeaderGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/SpringCloudCircuitBreakerHystrixFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/AbstractChangeRequestUriGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/RequestSizeGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/HystrixGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/RewritePathGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/AddResponseHeaderGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/StripPrefixGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/GatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/SecureHeadersProperties.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/factory/RewriteResponseHeaderGatewayFilterFactory.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/RouteToRequestUrlFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/filter/AdaptCachedBodyGlobalFilter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/config/HttpClientProperties.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/config/GatewayHystrixCircuitBreakerAutoConfiguration.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/config/GatewayMetricsAutoConfiguration.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/config/GatewayMetricsProperties.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/config/GatewayRedisAutoConfiguration.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/config/SimpleUrlHandlerMappingGlobalCorsAutoConfiguration.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/config/GatewayLoadBalancerClientAutoConfiguration.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/config/HttpClientCustomizer.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/config/MaxDataSizeValidator.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/config/GatewayEnvironmentPostProcessor.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/config/GatewayClassPathWarningAutoConfiguration.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/config/GatewayProperties.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/config/GatewayNoLoadBalancerClientAutoConfiguration.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/config/GatewayReactiveLoadBalancerClientAutoConfiguration.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/config/GatewayAutoConfiguration.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/config/GatewayResilience4JCircuitBreakerAutoConfiguration.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/config/GlobalCorsProperties.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/config/LoadBalancerProperties.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/config/PropertiesRouteDefinitionLocator.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/event/WeightDefinedEvent.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/event/FilterArgsEvent.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/event/EnableBodyCachingEvent.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/event/PredicateArgsEvent.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/event/RefreshRoutesEvent.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/route/Route.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/route/RouteDefinitionLocator.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/route/RouteDefinitionRouteLocator.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/route/RouteRefreshListener.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/route/RouteDefinitionRepository.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/route/RouteDefinitionWriter.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/route/CompositeRouteDefinitionLocator.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/route/CompositeRouteLocator.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/route/builder/PredicateSpec.java">
+<error line="73" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="83" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="93" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="104" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="116" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="126" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="138" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="149" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="162" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="173" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="184" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="199" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="226" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="237" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="304" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/route/builder/BooleanSpec.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/route/builder/RouteLocatorBuilder.java">
+<error line="30" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="41" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="49" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="62" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="75" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="87" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/route/builder/GatewayFilterSpec.java">
+<error line="77" column="8" severity="error" message="无用导入 - org.springframework.util.StringUtils 。" source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/route/builder/UriSpec.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/route/RouteDefinition.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/route/CachingRouteLocator.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/route/RouteLocator.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/route/InMemoryRouteDefinitionRepository.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/route/CachingRouteDefinitionLocator.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/reactor/blockhound/integration/CustomBlockHoundIntegration.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/reactor/blockhound/integration/CustomBlockHoundIntegrationTest.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/predicate/HostRoutePredicateFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/predicate/WeightRoutePredicateFactoryYaml404Tests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/predicate/AfterRoutePredicateFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/predicate/QueryRoutePredicateFactoryTests.java">
+<error line="49" column="2" severity="error" message="缺少 Javadoc 。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/predicate/RemoteAddrRoutePredicateFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/predicate/BetweenRoutePredicateFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/predicate/ReadBodyPredicateFactoryTest.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/predicate/BeforeRoutePredicateFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/predicate/HeaderRoutePredicateFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/predicate/BetweenRoutePredicateFactoryIntegrationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/predicate/WeightRoutePredicateFactoryIntegrationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/predicate/CookieRoutePredicateFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/predicate/CloudFoundryRouteServiceRoutePredicateFactoryTest.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/predicate/MethodRoutePredicateFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/predicate/PathRoutePredicateFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/predicate/CloudFoundryRouteServiceRoutePredicateFactoryIntegrationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/RoutePredicateHandlerMappingIntegrationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/RoutePredicateHandlerMappingTests.java">
+<error line="40" column="2" severity="error" message="缺少 Javadoc 。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/RoutePredicateHandlerMappingSameManagementPortIntegrationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/handler/AsyncPredicateTest.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/actuate/GatewayControllerEndpointTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/support/ipresolver/XForwardedRemoteAddressResolverTest.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/support/ConfigurationServiceTests.java">
+<error line="38" column="2" severity="error" message="缺少 Javadoc 。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/support/ShortcutConfigurableTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/support/tagsprovider/PropertiesTagsProviderTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/support/tagsprovider/GatewayHttpTagsProviderTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/support/tagsprovider/GatewayRouteTagsProviderTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/support/ServerWebExchangeUtilsTests.java">
+<error line="35" column="2" severity="error" message="缺少 Javadoc 。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/discovery/ReactiveGatewayDiscoveryClientAutoConfigurationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/discovery/BlockingGatewayDiscoveryClientAutoConfigurationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/discovery/DiscoveryClientRouteDefinitionLocatorTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/discovery/DiscoveryClientRouteDefinitionLocatorIntegrationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/NettyRoutingFilterIntegrationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/GatewayMetricsFilterCustomTagsTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/NettyRoutingFilterCompatibleTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/ForwardRoutingFilterTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/WebsocketRoutingFilterTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/NettyRoutingFilterTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/ratelimit/RedisRateLimiterTests.java">
+<error line="44" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="57" column="2" severity="error" message="缺少 Javadoc 。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/ratelimit/PrincipalNameKeyResolverIntegrationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/ratelimit/RedisRateLimiterConfigTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/ratelimit/RedisRateLimiterUnitTests.java">
+<error line="49" column="2" severity="error" message="缺少 Javadoc 。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="51" column="2" severity="error" message="缺少 Javadoc 。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="53" column="2" severity="error" message="缺少 Javadoc 。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="55" column="2" severity="error" message="缺少 Javadoc 。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/ratelimit/RedisRateLimiterDefaultFilterConfigTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/WeightCalculatorWebFilterConcurrentTests.java">
+<error line="51" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/LoadBalancerClientFilterTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/headers/HttpStatusInResponseHeadersFilterTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/headers/XForwardedHeadersFilterTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/headers/RemoveHopByHopHeadersFilterTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/headers/ForwardedHeadersFilterTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/headers/NonStandardHeadersInResponseTests.java">
+<error line="52" column="2" severity="error" message="缺少 Javadoc 。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/headers/HttpHeadersFilterMixedTypeTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/headers/HttpHeadersFilterTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/WeightCalculatorWebFilterTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/ReactiveLoadBalancerClientFilterTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/SetPathGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/RemoveRequestParameterGatewayFilterFactoryIntegrationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/MapRequestHeaderGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/HystrixGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/RedirectToGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/RemoveRequestParameterGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/RequestHeaderToRequestUriGatewayFilterFactoryIntegrationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/AddResponseHeaderGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/AddRequestParameterGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/PreserveHostHeaderGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/RetryGatewayFilterFactoryIntegrationTests.java">
+<error line="76" column="2" severity="error" message="缺少 Javadoc 。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/SaveSessionGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/RewriteLocationResponseHeaderGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/RequestSizeGatewayFilterFactoryTest.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/HystrixTestConfig.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/HystrixGatewayFilterFactoryPrincipalTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/AddRequestHeaderGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/RewriteLocationResponseHeaderGatewayFilterFactoryUnitTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/SpringCloudCircuitBreakerHystrixFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/RemoveResponseHeaderGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/SetStatusGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/StripPrefixGatewayFilterFactoryIntegrationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/SetRequestHeaderGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/DedupeResponseHeaderGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/RemoveRequestHeaderGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/SpringCloudCircuitBreakerTestConfig.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/SetPathGatewayFilterFactoryIntegrationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/SetResponseHeaderGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/RewriteResponseHeaderGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/RequestHeaderToRequestUriGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/rewrite/ModifyRequestBodyGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/rewrite/ModifyResponseBodyGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/rewrite/ModifyResponseBodyGatewayFilterFactoryGzipTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/rewrite/ModifyRequestBodyGatewayFilterFactoryUnitTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/rewrite/ModifyResponseBodyGatewayFilterFactoryUnitTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/StripPrefixGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/SecureHeadersGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/RequestRateLimiterGatewayFilterFactoryTests.java">
+<error line="54" severity="error" message="Javadoc 首句应以句号结尾。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/RewriteResponseHeaderGatewayFilterFactoryUnitTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/SecureHeadersGatewayFilterFactoryUnitTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/RewritePathGatewayFilterFactoryIntegrationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/SpringCloudCircuitBreakerFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/SpringCloudCircuitBreakerResilience4JFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/RequestHeaderSizeGatewayFilterFactoryTest.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/PrefixPathGatewayFilterFactoryTest.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/RewritePathGatewayFilterFactoryTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/factory/DedupeResponseHeaderGatewayFilterFactoryUnitTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/RouteToRequestUrlFilterTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/filter/GatewayMetricsFilterTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/config/GatewayAutoConfigurationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/config/GatewayNoLoadBalancerClientAutoConfigurationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/config/GatewayMetricsAutoConfigurationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/ssl/SSLHandshakeTimeoutTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/ssl/SingleCertSSLTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/ssl/SSLHandshakeTimeoutDeprecatedTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/ssl/MultiCertSSLTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/ssl/ClientCertAuthSSLTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/websocket/WebSocketIntegrationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/TestUtils.java">
+<error line="29" column="1" severity="error" message="工具类应隐藏 public 构造器。" source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/support/HttpServer.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/support/redis/RedisRule.java">
+<error line="32" column="2" severity="error" message="缺少 Javadoc 。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/support/AbstractHttpServer.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/support/ReactorHttpServer.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/GatewayIntegrationTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/FormIntegrationTests.java">
+<error line="54" column="2" severity="error" message="缺少 Javadoc 。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/HttpBinCompatibleController.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/PermitAllSecurityConfiguration.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/GatewayTestApplication.java">
+<error line="31" column="1" severity="error" message="工具类应隐藏 public 构造器。" source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/AdhocTestSuite.java">
+<error line="39" column="1" severity="error" message="工具类应隐藏 public 构造器。" source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
+<error line="134" column="2" severity="error" message="缺少 Javadoc 。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/BaseWebClientTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/RouteConstructionIntegrationTests.java">
+<error line="32" column="2" severity="error" message="缺少 Javadoc 。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/WebfluxNotIncludedTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/sse/SseIntegrationTests.java">
+<error line="64" column="2" severity="error" message="缺少 Javadoc 。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="82" severity="error" message="需要一个 Javadoc注释 @return 。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="82" column="45" severity="error" message="&apos;period&apos;需要Javadoc注释 @param 。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="82" column="57" severity="error" message="&apos;count&apos;需要Javadoc注释 @param 。" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/PostTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/HttpStatusTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/test/ForwardTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/cors/CorsTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/cors/SimpleUrlHandlerCorsTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/route/CachingRouteDefinitionLocatorTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/route/RouteDefinitionTest.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/route/RouteRefreshListenerTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/route/RouteDefinitionDefaultIdTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/route/RouteDefinitionRouteLocatorTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/route/builder/GatewayFilterSpecTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/route/builder/RouteBuilderTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/route/RouteTests.java">
+</file>
+<file name="/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-core/src/test/java/org/springframework/cloud/gateway/route/CachingRouteLocatorTests.java">
+</file>
+</checkstyle>

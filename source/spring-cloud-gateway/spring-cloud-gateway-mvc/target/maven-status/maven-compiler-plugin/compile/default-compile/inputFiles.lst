@@ -1,0 +1,4 @@
+/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-mvc/src/main/java/org/springframework/cloud/gateway/mvc/config/ProxyProperties.java
+/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-mvc/src/main/java/org/springframework/cloud/gateway/mvc/config/ProxyExchangeArgumentResolver.java
+/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-mvc/src/main/java/org/springframework/cloud/gateway/mvc/config/ProxyResponseAutoConfiguration.java
+/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/spring-cloud-gateway-mvc/src/main/java/org/springframework/cloud/gateway/mvc/ProxyExchange.java

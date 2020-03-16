@@ -1,0 +1,5 @@
+#Mon Mar 16 10:08:27 CST 2020
+module-resource*?\:file\:/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/target/checkstyle-header.txt=C87D51DF1E623E1FB90FB3C11AFB37C516E4539F
+module-resource*?\:/home/fk/project/springcloudNetflix/source/spring-cloud-gateway/src/checkstyle/checkstyle-suppressions.xml=CD8F2E13488E0FEA474432620951DC2428811D74
+module-resource*?\:https\://raw.githubusercontent.com/spring-cloud/spring-cloud-build/master/spring-cloud-build-tools/src/checkstyle/checkstyle-suppressions.xml=62D62A9E744552A9A0DCFDFD1A7EE6BFFF7B9FB1
+configuration*?=017FC4A10C3065D818B95B2B01186E679C82AF0E

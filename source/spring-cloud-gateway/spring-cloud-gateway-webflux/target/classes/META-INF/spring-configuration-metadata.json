@@ -1,0 +1,30 @@
+{
+  "groups": [
+    {
+      "name": "spring.cloud.gateway.proxy",
+      "type": "org.springframework.cloud.gateway.webflux.config.ProxyProperties",
+      "sourceType": "org.springframework.cloud.gateway.webflux.config.ProxyProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.cloud.gateway.proxy.auto-forward",
+      "type": "java.util.Set<java.lang.String>",
+      "description": "A set of header names that should be send downstream by default.",
+      "sourceType": "org.springframework.cloud.gateway.webflux.config.ProxyProperties"
+    },
+    {
+      "name": "spring.cloud.gateway.proxy.headers",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "description": "Fixed header values that will be added to all downstream requests.",
+      "sourceType": "org.springframework.cloud.gateway.webflux.config.ProxyProperties"
+    },
+    {
+      "name": "spring.cloud.gateway.proxy.sensitive",
+      "type": "java.util.Set<java.lang.String>",
+      "description": "A set of sensitive header names that will not be sent downstream by default.",
+      "sourceType": "org.springframework.cloud.gateway.webflux.config.ProxyProperties"
+    }
+  ],
+  "hints": []
+}
