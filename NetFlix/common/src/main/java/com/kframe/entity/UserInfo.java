@@ -1,12 +1,16 @@
-package com.kframe.common;
+package com.kframe.entity;
 
 import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
 /**
  * 用戶信息
  * @author fk
  */
-public class UserInfo implements Serializable {
-	
+@Entity
+@Table(name = "userdetail")
+public class UserInfo extends BaseEntity implements Serializable {
 	/**
 	 * 
 	 */

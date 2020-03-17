@@ -1,0 +1,57 @@
+package com.kframe.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
+import org.hibernate.annotations.GenericGenerator;
+
+@MappedSuperclass
+public abstract class BaseEntity implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1925989785295115138L;
+
+	@Id
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
+    private String id;
+	
+	@Column(name ="createtime", insertable = true)
+	private long createtime;
+	
+	@Column(name ="updatetime", updatable  = true)
+	private long updatetime;
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public long getCreatetime() {
+		return createtime;
+	}
+
+	public void setCreatetime(long createtime) {
+		this.createtime = createtime;
+	}
+
+	public long getUpdatetime() {
+		return updatetime;
+	}
+
+	public void setUpdatetime(long updatetime) {
+		this.updatetime = updatetime;
+	}
+	
+	
+	
+}

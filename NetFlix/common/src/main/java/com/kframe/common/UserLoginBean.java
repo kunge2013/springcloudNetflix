@@ -4,6 +4,8 @@ import java.util.Collection;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
+import com.kframe.entity.UserInfo;
 /**
  * 用户登录授权对象
  * @author fk
