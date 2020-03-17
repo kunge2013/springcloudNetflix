@@ -4,8 +4,11 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
+import org.springframework.core.Ordered;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
@@ -14,8 +17,13 @@ import org.springframework.web.server.ServerWebExchange;
 
 import reactor.core.publisher.Mono;
 
-public class TokenFilter implements GlobalFilter {
 
+public class TokenFilter implements GlobalFilter, Ordered {
+
+	/**
+	 * 日志处理
+	 */
+	public static final Logger LOGGER = LoggerFactory.getLogger(TokenFilter.class);
 	@Override
 	public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         // 请求对象
@@ -26,7 +34,7 @@ public class TokenFilter implements GlobalFilter {
         // 只有综合路由才添加这个全局过滤器（routesId：route_all）
         // 如果请求路径中不存在 routeAll 字符串
         if(request.getURI().toString().indexOf("routeAll") == -1){
-            System.out.println("filter -> return");
+        	LOGGER.info("filter -> return");
             // 直接跳出
             return chain.filter(exchange);
         }
@@ -66,10 +74,16 @@ public class TokenFilter implements GlobalFilter {
             String afterPath = request.getPath().pathWithinApplication().value();
             // 获取响应状态码
             HttpStatus afterStatusCode = response.getStatusCode();
-            System.out.println("响应码：" + afterStatusCode + "，请求路径：" + afterPath);
+            LOGGER.info("响应码：" + afterStatusCode + "，请求路径：" + afterPath);
             // 响应后
-            System.out.println("filter -> after");
+            LOGGER.info("filter -> after");
         }));
     }
+
+	@Override
+	public int getOrder() {
+		// TODO Auto-generated method stub
+		return 1000;
+	}
 
 }
