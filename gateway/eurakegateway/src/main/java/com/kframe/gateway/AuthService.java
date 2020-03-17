@@ -21,7 +21,7 @@ public class AuthService implements IAuthSevice {
 
     private static final String CACHE_KEY_PREFIX = "user:token:pc:";
 
-    private static final Integer[] BOSS_UID = new Integer[]{
+    private static final Integer[] BOSS_UID = new Integer[] {
             271498,
             427928,
             41458,
