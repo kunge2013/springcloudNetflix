@@ -34,7 +34,6 @@ public class AuthFilter implements GlobalFilter, Ordered {
 	 */
 	@Resource
 	private IAuthSevice authSevice;
-	
 
 	/**
 	 * 日志处理
