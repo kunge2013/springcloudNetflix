@@ -13,8 +13,28 @@ eureka:
     
 spring:
   application:
-    name: eurekaclient
-    
+    name: eurekagateway
+  cloud:  
+    gateway:
+      discovery:
+        locator:
+         ## 发现客户端网关集成
+          enabled: true
+         ##  选项在谓词和过滤器中的小写Service ID，默认为false。当eureka自动大写serviceId时非常有用。所以MYSERIVCE，会匹配
+          lower-case-service-id: true 
+      routes: 
+      - id: baidurouteid
+        uri:  https://www.baidu.com
+        predicates:
+#        - Header=X-Request-I
+        - Path=/baidu/**
+        - Host=0.0.0.0
+        - Method=GET
+        filters:
+        - StripPrefix=1
+        
+      
+              
 server:
   port: 5001  
  
