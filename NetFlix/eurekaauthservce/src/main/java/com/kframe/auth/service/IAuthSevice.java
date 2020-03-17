@@ -3,7 +3,7 @@ package com.kframe.auth.service;
 import java.io.Serializable;
 
 import com.kframe.common.RetResult;
-import com.kframe.common.UserInfo;
+import com.kframe.entity.UserInfo;
 /**
  * 用户认证
  * @author fk

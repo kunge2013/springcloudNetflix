@@ -11,7 +11,8 @@ import com.kframe.auth.JwtConstant;
 import com.kframe.auth.JwtFactory;
 import com.kframe.common.RetCodes;
 import com.kframe.common.RetResult;
-import com.kframe.common.UserInfo;
+import com.kframe.entity.UserInfo;
+import com.kframe.repositorys.UserRepository;
 
 
 /**
@@ -24,6 +25,9 @@ public class AuthService implements IAuthSevice {
 	@Autowired
 	private StringRedisTemplate redisTemplate;
 
+	@Autowired
+	private UserRepository userRepository;
+	
 	/*@Value("${debug}")
     private boolean debug;*/
 
@@ -99,6 +103,7 @@ public class AuthService implements IAuthSevice {
 	@SuppressWarnings("unchecked")
 	@Override
 	public RetResult<String> login(UserInfo userinfo) {
+		userRepository.save(userinfo);
 		String password = userinfo.getPassword();
 		String username  = userinfo.getUsername();
 		if (!username.isEmpty() && !password.isEmpty()) {

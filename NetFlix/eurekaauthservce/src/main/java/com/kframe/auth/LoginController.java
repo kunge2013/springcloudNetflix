@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.kframe.auth.service.IAuthSevice;
 import com.kframe.common.RetResult;
-import com.kframe.common.UserInfo;
+import com.kframe.entity.UserInfo;
 
 @RestController
 public class LoginController {
