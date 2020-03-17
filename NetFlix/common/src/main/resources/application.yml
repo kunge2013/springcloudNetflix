@@ -1,0 +1,29 @@
+eureka:
+  client:
+#    自动刷新eureka配置
+    refresh:
+      enable: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+    register-with-eureka: true
+    
+  instance:
+    status-page-url:  ${server.servletPath}/info1
+    home-page-url: ${server.servletPath}/health1
+    
+spring:
+  application:
+    name: authservice
+
+server:
+  port: 7001  
+ 
+ 
+  ## 日志级别设置  
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG
+    org.springframework.http.HttpLogging:  DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: DEBUG
