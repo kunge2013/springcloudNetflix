@@ -32,8 +32,12 @@ spring:
         - Method=GET
         filters:
         - StripPrefix=1
-        
-      
+#        登录认证服务配置
+      - id: authservice
+        uri: lb://authservice
+        predicates:
+        - Header=token,userid
+        - Path=/authservice/**
               
 server:
   port: 5001  
