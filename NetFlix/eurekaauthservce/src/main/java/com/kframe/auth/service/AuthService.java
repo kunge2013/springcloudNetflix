@@ -1,4 +1,4 @@
-package com.kframe.auth;
+package com.kframe.auth.service;
 
 import java.io.Serializable;
 import java.util.concurrent.TimeUnit;
@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
+import com.kframe.auth.JwtConstant;
+import com.kframe.auth.JwtFactory;
 import com.kframe.common.RetCodes;
 import com.kframe.common.RetResult;
 import com.kframe.common.UserInfo;

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.kframe.auth.service.IAuthSevice;
 import com.kframe.common.RetResult;
 import com.kframe.common.UserInfo;
 

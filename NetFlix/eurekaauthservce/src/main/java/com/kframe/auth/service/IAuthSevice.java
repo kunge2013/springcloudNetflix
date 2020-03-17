@@ -1,4 +1,4 @@
-package com.kframe.auth;
+package com.kframe.auth.service;
 
 import java.io.Serializable;
 
