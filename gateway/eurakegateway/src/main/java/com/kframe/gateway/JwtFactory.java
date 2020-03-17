@@ -1,11 +1,13 @@
 package com.kframe.gateway;
 
+import java.io.Serializable;
 import java.util.Base64;
 import java.util.Date;
+import java.util.Optional;
 
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
-
+import javax.swing.text.html.Option;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
@@ -27,17 +29,17 @@ public class JwtFactory {
 	        return key;
 	    }
 
-	    public static Claims parseJWT(String jsonWebToken) {
+	    public static Optional<Claims> parseJWT(String jsonWebToken) {
 	        try {
 	            SecretKey key = generalKey();
 	            Claims claims = (Claims) Jwts.parser().setSigningKey(key).parseClaimsJws(jsonWebToken).getBody();
-	            return claims;
+	            return Optional.of(claims);
 	        } catch (Exception var3) {
-	            return null;
+	            return Optional.of(null);
 	        }
 	    }
 
-	    public static String createJWT(String name, String userId) {
+	    public static String createJWT(String name, Serializable userId) {
 	        SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
 	        long nowMillis = System.currentTimeMillis();
 	        Date now = new Date(nowMillis);
