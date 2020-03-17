@@ -43,9 +43,7 @@ public class TokenFilter implements GlobalFilter, Ordered {
         String token = exchange.getRequest().getQueryParams().getFirst("token");
         // 如果为空，那么将返回 401
         if (token == null || token.isEmpty()) {
-
             // 响应消息内容对象
-//            RetResult<Object> ret = RetResult.success();
             Map<String, Object> message = new HashMap();
             // 响应状态 
             message.put("code", -1);
