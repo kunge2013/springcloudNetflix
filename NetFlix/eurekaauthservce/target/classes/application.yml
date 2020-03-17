@@ -14,7 +14,7 @@ eureka:
 spring:
   application:
     name: authservice
-    
+
 server:
   port: 7001  
  
@@ -23,4 +23,7 @@ server:
 logging:
   level:
     ROOT: INFO
-    org.springframework.web: DEBUG 
+    org.springframework.web: DEBUG
+    org.springframework.http.HttpLogging:  DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: DEBUG
