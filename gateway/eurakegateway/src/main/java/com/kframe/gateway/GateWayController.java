@@ -25,6 +25,8 @@ public class GateWayController {
 		// @formatter:off
 		return builder.routes()
 		.route("path_route", r -> r.path("/get").uri("http://httpbin.org"))
+		.route("path_route", r -> r.path("/bd").uri("http://www.baidu.com"))
+		
 		.route("host_route", r -> r.host("*.myhost.org").uri("http://httpbin.org"))
 		.route("rewrite_route", r -> r.host("*.rewrite.org").filters(f -> f.rewritePath("/foo/(?<segment>.*)", "/${segment}")).uri("http://httpbin.org"))
 		.route("hystrix_route", r -> r.host("*.hystrix.org").filters(f -> f.hystrix(c -> c.setName("slowcmd"))).uri("http://httpbin.org"))
