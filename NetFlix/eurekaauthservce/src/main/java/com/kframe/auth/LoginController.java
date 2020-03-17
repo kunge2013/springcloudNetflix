@@ -33,7 +33,7 @@ public class LoginController {
 
 	@ResponseBody
 	@GetMapping("/checkLoginStatus")
-	public RetResult checkLoginStatus(@RequestParam int userid, @RequestHeader(name = "token") String token) {
+	public RetResult checkLoginStatus(@RequestParam int userid, @RequestParam String token) {
 		return authService.checkTokenExists(token, userid);
 	}
 
