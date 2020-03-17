@@ -4,6 +4,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.annotation.Resource;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
@@ -13,17 +15,28 @@ import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.http.server.reactive.ServerHttpResponse;
+import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 
+import io.lettuce.core.dynamic.annotation.CommandNaming;
 import reactor.core.publisher.Mono;
+/**
+ * 过滤器配置
+ * @author fk
+ *
+ */
+@Component
+public class AuthFilter implements GlobalFilter, Ordered {
 
-
-public class TokenFilter implements GlobalFilter, Ordered {
-
+	/**
+	 * 鉴权配置
+	 */
+	@Resource
+	private IAuthSevice authSevice;
 	/**
 	 * 日志处理
 	 */
-	public static final Logger LOGGER = LoggerFactory.getLogger(TokenFilter.class);
+	public static final Logger LOGGER = LoggerFactory.getLogger(AuthFilter.class);
 	@Override
 	public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         // 请求对象
