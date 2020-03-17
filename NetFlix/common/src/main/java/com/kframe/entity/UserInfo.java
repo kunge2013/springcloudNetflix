@@ -10,7 +10,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "userdetail")
-public class UserInfo extends BaseEntity implements Serializable {
+public class UserInfo extends BaseSimpleEntity implements Serializable {
 	/**
 	 * 
 	 */
