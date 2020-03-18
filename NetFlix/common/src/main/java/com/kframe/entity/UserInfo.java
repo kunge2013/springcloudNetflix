@@ -14,6 +14,8 @@ import javax.persistence.Table;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
+import com.kframe.annotations.Comment;
 /**
  * 用戶信息
  * @author fk
@@ -21,6 +23,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 @Entity
 @Table(name = "userdetail")
 public class UserInfo extends BaseSimpleEntity implements UserDetails, Serializable {
+	
+	@Comment("男")
+	public static final short SEX_MAIL = 2;
+	
+	@Comment("女")
+	public static final short SEX_FEMAIL = 4;
+	
 	/**
 	 * 
 	 */
@@ -32,11 +41,21 @@ public class UserInfo extends BaseSimpleEntity implements UserDetails, Serializa
 	@Column(name ="password", length = 255)
 	private String password = "";
 
+	@Comment("性别  0 未知 2 男 4 女")
 	@Column(name ="sex")
 	private short sex;//性别
 	
+	@Comment("出生年月 yyyy-mm-dd")
 	@Column(name = "birth", length = 20)
 	private String birth;
+	
+	@Comment("电话号码")
+	@Column(name = "mobile", length = 20)
+	private String mobile;
+	
+	@Comment("国家编码")
+	@Column(name = "nation", length = 2)
+	private int nation;
 	
 	//急加载 会查询role表
     @ManyToMany(fetch = FetchType.EAGER)
