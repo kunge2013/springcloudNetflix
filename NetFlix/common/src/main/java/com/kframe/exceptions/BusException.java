@@ -18,6 +18,22 @@ public class BusException extends RuntimeException {
 
 	private String message;
 
+	public int getCode() {
+		return code;
+	}
+
+	public void setCode(int code) {
+		this.code = code;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
 	public static BusException create(int code, String message) {
 		BusException exception = new BusException(code, message);
 		return exception;
