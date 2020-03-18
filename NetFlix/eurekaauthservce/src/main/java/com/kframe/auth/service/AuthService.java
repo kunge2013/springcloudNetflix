@@ -30,7 +30,7 @@ import com.kframe.repositorys.UserRepository;
  * @author fk
  */
 @Service
-public class AuthService extends BaseService implements IAuthSevice, UserDetailsService {
+public class AuthService extends BaseService implements IAuthSevice {
 
 	@Autowired
 	private StringRedisTemplate redisTemplate;
@@ -109,16 +109,5 @@ public class AuthService extends BaseService implements IAuthSevice, UserDetails
 		return RetResult.success(userRepository.save(userinfo));
 	}
 
-	/**
-	 * 查询当前用户是否存在
-	 */
-	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		// TODO Auto-generated method stub
-		List<UserInfo> list = userRepository.queryByUsername(username);
-		if (list.isEmpty()) throw new BizException(RetCodes.USER_NOT_EXIST, "user not exist !");
-		UserInfo user = list.get(0);
-		LOGGER.info("authorities {} " + user.getAuthorities());
-		return user;
-	}
+
 }
