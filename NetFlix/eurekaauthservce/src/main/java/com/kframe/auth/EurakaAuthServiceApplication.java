@@ -20,7 +20,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class EurakaAuthServiceApplication {
 
 	static final Logger LOGGER = LoggerFactory.getLogger(EurakaAuthServiceApplication.class);
-
     public static void main(String[] args) {
     	SpringApplication.run(EurakaAuthServiceApplication.class);
     }
