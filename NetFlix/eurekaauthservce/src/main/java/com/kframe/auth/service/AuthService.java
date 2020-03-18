@@ -1,20 +1,27 @@
 package com.kframe.auth.service;
 
-import static com.kframe.common.RetCodes.*;
+import static com.kframe.common.RetCodes.LOGIN_FAIL;
+import static com.kframe.common.RetCodes.USER_REGISTER_FAIL;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.kframe.annotations.Comment;
 import com.kframe.auth.JwtConstant;
 import com.kframe.auth.JwtFactory;
+import com.kframe.common.BaseService;
 import com.kframe.common.RetCodes;
 import com.kframe.common.RetResult;
 import com.kframe.entity.UserInfo;
+import com.kframe.exceptions.BizException;
 import com.kframe.repositorys.UserRepository;
 
 /**
@@ -23,7 +30,7 @@ import com.kframe.repositorys.UserRepository;
  * @author fk
  */
 @Service
-public class AuthService implements IAuthSevice {
+public class AuthService extends BaseService implements IAuthSevice, UserDetailsService {
 
 	@Autowired
 	private StringRedisTemplate redisTemplate;
@@ -31,6 +38,7 @@ public class AuthService implements IAuthSevice {
 	@Autowired
 	private UserRepository userRepository;
 
+	
 	/*
 	 * @Value("${debug}") private boolean debug;
 	 */
@@ -99,5 +107,18 @@ public class AuthService implements IAuthSevice {
 			return RetCodes.retCode(USER_REGISTER_FAIL);
 		UserInfo userinfo = new UserInfo(null, null, null, mobile, nation, null);
 		return RetResult.success(userRepository.save(userinfo));
+	}
+
+	/**
+	 * 查询当前用户是否存在
+	 */
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		// TODO Auto-generated method stub
+		List<UserInfo> list = userRepository.queryByUsername(username);
+		if (list.isEmpty()) throw new BizException(RetCodes.USER_NOT_EXIST, "user not exist !");
+		UserInfo user = list.get(0);
+		LOGGER.info("authorities {} " + user.getAuthorities());
+		return user;
 	}
 }
