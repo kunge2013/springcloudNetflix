@@ -41,26 +41,26 @@ public class UserInfo extends BaseSimpleEntity implements UserDetails, Serializa
 	private static final long serialVersionUID = 6562335913509302463L;
 
 	@Column(name ="username", length = 20)
-	private String username = "";
+	public String username = "";
 
 	@Column(name ="password", length = 255)
-	private String password = "";
+	public String password = "";
 
 	@Comment("性别  0 未知 2 男 4 女")
 	@Column(name ="sex")
-	private short sex;//性别
+	public short sex;//性别
 	
 	@Comment("出生年月 yyyy-mm-dd")
 	@Column(name = "birth", length = 20)
-	private String birth;
+	public String birth;
 	
 	@Comment("电话号码")
 	@Column(name = "mobile", length = 20)
-	private String mobile;
+	public String mobile;
 	
 	@Comment("国家编码")
 	@Column(name = "nation", length = 2)
-	private int nation;
+	public int nation;
 	
 	//急加载 会查询role表
     @ManyToMany(fetch = FetchType.EAGER)
@@ -68,7 +68,7 @@ public class UserInfo extends BaseSimpleEntity implements UserDetails, Serializa
             name = "USER_ROlE",
             joinColumns = {@JoinColumn(name = "USER_ID", referencedColumnName = "ID")},
             inverseJoinColumns = {@JoinColumn(name = "ROLE_ID", referencedColumnName = "ID")})
-    private List<Role> roles;
+    public List<Role> roles;
 
     
 	public short getSex() {
@@ -117,7 +117,9 @@ public class UserInfo extends BaseSimpleEntity implements UserDetails, Serializa
 		this.password = password;
 	}
 
-	
+	public UserInfo() {
+		// TODO Auto-generated constructor stub
+	}
 	public UserInfo(String username, String password, String birth, String mobile, int nation,
 			List<Role> roles) {
 		super();

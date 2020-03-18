@@ -8,8 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import com.kframe.annotations.Comment;
 @Comment("自增类型 基础实体")
 @MappedSuperclass
