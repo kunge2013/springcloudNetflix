@@ -26,5 +26,13 @@ public interface IAuthSevice {
 	 */
 	public RetResult checkTokenExists(String token, Serializable id);
 	
+	/**
+	 * 短信注册
+	 * @param mobile
+	 * @param verifycode
+	 * @param nation
+	 * @return
+	 */
+	public RetResult<UserInfo> register(int nation, String mobile, String verifycode);
 	
 }
