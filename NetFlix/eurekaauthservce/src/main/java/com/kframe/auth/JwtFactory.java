@@ -1,8 +1,9 @@
 package com.kframe.auth;
 
-import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 import javax.crypto.SecretKey;
@@ -10,6 +11,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.kframe.entity.Role;
 import com.kframe.entity.UserInfo;
 import com.kframe.exceptions.BizException;
 
@@ -47,7 +49,7 @@ public class JwtFactory {
 			Claims claims = (Claims) Jwts.parser().setSigningKey(key).parseClaimsJws(token).getBody();
 			return Optional.of(claims);
 		} catch (Exception var3) {
-			return Optional.of(null);
+			return Optional.ofNullable(null);
 		}
 	}
 
@@ -59,7 +61,19 @@ public class JwtFactory {
 	 */
 	public static UserInfo parseUserInfo(String token) {
 		Optional<Claims> optional = parseJWT(token);
-		if (optional.isPresent()) return (UserInfo) optional.get().get(CLAIM_USERINFO);
+		if (optional.isPresent()) {
+			Claims claims = optional.get();
+			UserInfo userInfo = new UserInfo();
+			String username = (String) claims.get("username");
+			String mobile = (String)claims.get("mobile");
+			String password = (String) claims.get("password");
+			List roles = (List)claims.get("roles");
+			userInfo.setUsername(username);
+			userInfo.setPassword(password);
+			userInfo.setMobile(mobile);
+			userInfo.setRoles(roles);
+			return userInfo;
+		}
 		throw new BizException(-1, "un validate token !");
 	}
 
@@ -69,7 +83,11 @@ public class JwtFactory {
 		long nowMillis = System.currentTimeMillis();
 		Date now = new Date(nowMillis);
 		SecretKey signingKey = generalKey();
-		JwtBuilder builder = Jwts.builder().setHeaderParam("type", "JWT").claim(CLAIM_USERINFO, userinfo)
+		JwtBuilder builder = Jwts.builder().setHeaderParam("type", "JWT")
+				 .claim("username", userinfo.getUsername())
+				 .claim("mobile", userinfo.getMobile())
+				 .claim("password", userinfo.getPassword())
+				 .claim("roles", userinfo.getRoles())
 				.setIssuer(issure)
 				.setAudience(audience)
 				.setIssuedAt(now)
@@ -83,6 +101,16 @@ public class JwtFactory {
 		return builder.compact();
 	}
 
+	public static void main(String[] args) {
+		UserInfo userinfo = new UserInfo("admin", "123456");
+		List<Role> list = new ArrayList<Role>();
+		list.add(new Role());
+		userinfo.setRoles(list);
+		String token = createJWT(userinfo);
+		System.out.println(token);
+		 userinfo = parseUserInfo(token);
+		System.out.println(userinfo);
+	}
 	/**
 	 * 校验有效性
 	 * @param token

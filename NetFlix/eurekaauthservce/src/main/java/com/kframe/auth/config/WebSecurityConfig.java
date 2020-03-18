@@ -23,6 +23,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final AccessDeniedHandler accessDeniedHandler;
 
+    @Autowired
+    AjaxAuthenticationSuccessHandler authenticationSuccessHandler;  // 登录成功返回的 JSON 格式数据给前端（否则为 html）
+
+    @Autowired
+    AjaxAuthenticationFailureHandler authenticationFailureHandler;  //  登录失败返回的 JSON 格式数据给前端（否则为 html）
+
+    @Autowired
+    AjaxLogoutSuccessHandler logoutSuccessHandler;  // 注销成功返回的 JSON 格式数据给前端（否则为 登录时的 html）
+
+    
     private final UserDetailsService customUserDetailsService;
 
     private final JwtAuthenticationTokenFilter authenticationTokenFilter;
@@ -63,9 +73,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 
                 .authorizeRequests()
-
                 // 对于获取token的rest api要允许匿名访问
-                .antMatchers("/api/v1/auth", "/api/v1/signout", "/error/**", "/api/**").permitAll()
+//                .antMatchers("/api/v1/auth", "/api/v1/signout", "/error/**", "/api/**").permitAll()
+                .antMatchers("/login").permitAll()
                 // 除上面外的所有请求全部需要鉴权认证
                 .anyRequest().authenticated();
 
@@ -91,6 +101,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
+    }
+    
+    @Bean
+    public CustomAuthenticationFilter customAuthenticationFilter() throws Exception {
+    	CustomAuthenticationFilter filter = new CustomAuthenticationFilter();
+        filter.setAuthenticationSuccessHandler(authenticationSuccessHandler);
+        filter.setAuthenticationFailureHandler(authenticationFailureHandler);
+        filter.setFilterProcessesUrl("/login"); // 设置登陆接口名
+        //这句很关键，重用WebSecurityConfigurerAdapter配置的AuthenticationManager，不然要自己组装AuthenticationManager
+        filter.setAuthenticationManager(authenticationManagerBean());
+        return filter;
+ 
     }
 	
 }
