@@ -68,8 +68,8 @@ logging:
     org.springframework.security.oauth2: DEBUG
     com.kframe: DEBUG
     
-    
-#数据源配置
-
+#jwt 认证头配置    
+jwt:  
+  header: token
     
     
