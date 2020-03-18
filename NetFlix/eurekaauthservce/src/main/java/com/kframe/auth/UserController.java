@@ -32,6 +32,7 @@ public class UserController {
 	public RetResult<String> login(@RequestParam String username, @RequestParam String password) {
 		return authService.login(new UserInfo(username, password));
 	}
+	
 
 	@ResponseBody
 	@GetMapping("/checkLoginStatus")
