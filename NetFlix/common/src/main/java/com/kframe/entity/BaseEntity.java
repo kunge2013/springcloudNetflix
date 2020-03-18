@@ -53,7 +53,18 @@ public abstract class BaseEntity implements Serializable {
 	public void setUpdatetime(long updatetime) {
 		this.updatetime = updatetime;
 	}
-	
+
+	public BaseEntity(String id, long createtime, long updatetime) {
+		super();
+		this.id = id;
+		this.createtime = createtime;
+		this.updatetime = updatetime;
+	}
+
+	@Override
+	public String toString() {
+		return "BaseEntity [id=" + id + ", createtime=" + createtime + ", updatetime=" + updatetime + "]";
+	}
 	
 	
 }

@@ -1,4 +1,7 @@
 package com.kframe.common;
+
+import com.kframe.annotations.Comment;
+
 /**
  * 錯誤編碼
  * @author fk
@@ -13,6 +16,9 @@ public class RetCodes {
 	 * 注册失败
 	 */
 	public static final int USER_REGISTER_FAIL = 20000;
+	
+	@Comment("用户不存在")
+	public static final int USER_NOT_EXIST = 20001;
 	
 	/**
 	 * 錯誤嗎

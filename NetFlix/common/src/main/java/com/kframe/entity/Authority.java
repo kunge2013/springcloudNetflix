@@ -89,5 +89,11 @@ public class Authority extends BaseSimpleEntity {
 	public Authority() {
 		// TODO Auto-generated constructor stub
 	}
+
+	@Override
+	public String toString() {
+		return "Authority [name=" + name + ", url=" + url + ", pid=" + pid + ", description=" + description + ", roles="
+				+ roles + ", id=" + id + ", createtime=" + createtime + ", updatetime=" + updatetime + "]";
+	}
 	
 }

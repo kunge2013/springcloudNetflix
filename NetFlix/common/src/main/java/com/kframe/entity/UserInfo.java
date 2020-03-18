@@ -1,6 +1,7 @@
 package com.kframe.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -13,6 +14,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import com.kframe.annotations.Comment;
@@ -128,28 +130,36 @@ public class UserInfo extends BaseSimpleEntity implements UserDetails, Serializa
 	}
 
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
-		return null;
+        List<GrantedAuthority> auths = new ArrayList<GrantedAuthority>();
+        List<Role> roles = this.getRoles();
+        if (roles == null ) {
+        	roles = new ArrayList<Role>();
+        }
+        for (Role role : roles) {
+            for(Authority aurh:role.getAuthoritys())
+            auths.add(new SimpleGrantedAuthority(aurh.getName()));
+        }
+        return auths;
 	}
 
 	public boolean isAccountNonExpired() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	public boolean isAccountNonLocked() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	public boolean isCredentialsNonExpired() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	public String getMobile() {
@@ -166,6 +176,13 @@ public class UserInfo extends BaseSimpleEntity implements UserDetails, Serializa
 
 	public void setNation(int nation) {
 		this.nation = nation;
+	}
+
+	@Override
+	public String toString() {
+		return "UserInfo [username=" + username + ", password=" + password + ", sex=" + sex + ", birth=" + birth
+				+ ", mobile=" + mobile + ", nation=" + nation + ", roles=" + roles + ", id=" + id + ", createtime="
+				+ createtime + ", updatetime=" + updatetime + "]";
 	}
 	
 }

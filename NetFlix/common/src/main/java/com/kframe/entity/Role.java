@@ -57,5 +57,13 @@ public class Role extends BaseSimpleEntity {
 	public Role() {
 		// TODO Auto-generated constructor stub
 	}
+
+	@Override
+	public String toString() {
+		return "Role [name=" + name + ", users=" + users + ", authoritys=" + authoritys + ", id=" + id + ", createtime="
+				+ createtime + ", updatetime=" + updatetime + "]";
+	}
+
+	
 	
 }
