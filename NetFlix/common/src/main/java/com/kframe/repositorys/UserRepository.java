@@ -15,7 +15,6 @@ import com.kframe.entity.UserInfo;
 public interface UserRepository extends JpaRepository<UserInfo, Serializable> {
 	/**
 	 * 统计 当前用户是否已经注册
-	 * 
 	 * @param mobile
 	 * @param nation
 	 * @return
