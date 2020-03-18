@@ -8,6 +8,7 @@ import com.kframe.annotations.Comment;
  */
 @Comment("全局异常处理")
 public class BusException extends RuntimeException {
+	
 	/**
 	 * 
 	 */
