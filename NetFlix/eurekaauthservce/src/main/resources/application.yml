@@ -47,7 +47,7 @@ spring:
     # 指定生成表名的存储引擎为InnoDBD
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
 
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
