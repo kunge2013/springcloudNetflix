@@ -10,6 +10,11 @@ public class RetCodes {
 	public static final int LOGIN_FAIL = 10000;
 	
 	/**
+	 * 注册失败
+	 */
+	public static final int USER_REGISTER_FAIL = 20000;
+	
+	/**
 	 * 錯誤嗎
 	 * @param retcode
 	 * @return

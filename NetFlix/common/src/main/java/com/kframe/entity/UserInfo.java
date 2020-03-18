@@ -24,6 +24,9 @@ import com.kframe.annotations.Comment;
 @Table(name = "userdetail")
 public class UserInfo extends BaseSimpleEntity implements UserDetails, Serializable {
 	
+	@Comment("未知")
+	public static final short SEX_UNKNOW = 0;
+	
 	@Comment("男")
 	public static final short SEX_MAIL = 2;
 	
@@ -110,6 +113,18 @@ public class UserInfo extends BaseSimpleEntity implements UserDetails, Serializa
 		super();
 		this.username = username;
 		this.password = password;
+	}
+
+	
+	public UserInfo(String username, String password, String birth, String mobile, int nation,
+			List<Role> roles) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.birth = birth;
+		this.mobile = mobile;
+		this.nation = nation;
+		this.roles = roles;
 	}
 
 	public Collection<? extends GrantedAuthority> getAuthorities() {
