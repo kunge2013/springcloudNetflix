@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:com.kframe.eurekaclient.HystrixTurbineApplication</config>
+		<config>java:com.kframe.gateway.HystrixTurbineApplication</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
