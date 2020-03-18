@@ -3,6 +3,7 @@ package com.kframe.auth.config;
 import java.io.IOException;
 import java.util.Optional;
 
+import javax.annotation.Resource;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -20,6 +21,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.kframe.auth.JwtFactory;
 import com.kframe.entity.UserInfo;
+import com.kframe.repositorys.UserRepository;
 
 import io.jsonwebtoken.Claims;
 
@@ -34,6 +36,8 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 	@Value("${jwt.header}")
 	private String tokenheader;
 
+	@Resource
+	private UserRepository userRepository;
 	Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
 	@Override
@@ -44,7 +48,18 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 		UserInfo userinfo = null;
 		LOGGER.info("headers  {}  , auth = {} ", request.getHeaderNames(), auth);
 		if (auth.isEmpty()) {
-			return;
+			 username = request.getParameter("username");
+			 String password = request.getParameter("password");
+			 Optional<UserInfo> optional = userRepository.queryOneByUsername(username);
+			 if (optional.isPresent()) {
+				 userinfo = optional.get();
+				 if(!password.equalsIgnoreCase(optional.get().getPassword())) {
+					 return;
+				 }
+				 
+			 } else {
+				 return;
+			 }
 		}
 		Optional<Claims> optional = JwtFactory.parseJWT(auth);
 		if (optional.isPresent()) {
