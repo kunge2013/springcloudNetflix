@@ -9,6 +9,8 @@ import javax.persistence.MappedSuperclass;
 
 import org.hibernate.annotations.GenericGenerator;
 
+import com.kframe.annotations.Comment;
+@Comment("UUID 类型基础实体")
 @MappedSuperclass
 public abstract class BaseEntity implements Serializable {
 

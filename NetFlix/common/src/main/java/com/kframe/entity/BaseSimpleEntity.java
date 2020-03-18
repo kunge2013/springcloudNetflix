@@ -10,6 +10,8 @@ import javax.persistence.MappedSuperclass;
 
 import org.hibernate.annotations.GenericGenerator;
 
+import com.kframe.annotations.Comment;
+@Comment("自增类型 基础实体")
 @MappedSuperclass
 public abstract class BaseSimpleEntity implements Serializable {
 
@@ -20,15 +22,22 @@ public abstract class BaseSimpleEntity implements Serializable {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    protected long id;
 	
 	@Column(name ="createtime", insertable = true)
-	private long createtime;
+	protected long createtime;
 	
 	@Column(name ="updatetime", updatable  = true)
-	private long updatetime;
+	protected long updatetime;
 
-	
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 
 	public long getCreatetime() {
 		return createtime;
