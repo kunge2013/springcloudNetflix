@@ -109,7 +109,7 @@ public class AuthService implements IAuthSevice {
 		if (!username.isEmpty() && !password.isEmpty()) {
 			if (username.equals("admin") && password.equals("123456")) {
 				String token = JwtFactory.createJWT(userinfo);
-				saveToken(token, userinfo.getUserid());
+				saveToken(token, userinfo.getId());
 				return RetResult.success(token);
 			}
 		}
