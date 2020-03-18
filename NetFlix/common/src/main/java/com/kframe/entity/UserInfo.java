@@ -136,5 +136,21 @@ public class UserInfo extends BaseSimpleEntity implements UserDetails, Serializa
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+	public String getMobile() {
+		return mobile;
+	}
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+
+	public int getNation() {
+		return nation;
+	}
+
+	public void setNation(int nation) {
+		this.nation = nation;
+	}
 	
 }
