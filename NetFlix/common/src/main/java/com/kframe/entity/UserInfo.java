@@ -35,6 +35,8 @@ public class UserInfo extends BaseSimpleEntity implements UserDetails, Serializa
 	@Comment("女")
 	public static final short SEX_FEMAIL = 4;
 	
+	//默认密码 123456
+    public static final String DEFAULT_PASSWORD = "123456";
 	/**
 	 * 
 	 */
