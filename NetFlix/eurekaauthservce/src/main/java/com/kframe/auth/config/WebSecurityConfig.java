@@ -118,8 +118,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
     
     @Bean
-    public FilterRegistrationBean registerCustomAuthenticationFilter() throws Exception {
-    	FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
+    public FilterRegistrationBean<CustomAuthenticationFilter> registerCustomAuthenticationFilter() throws Exception {
+    	FilterRegistrationBean<CustomAuthenticationFilter> filterRegistrationBean = new FilterRegistrationBean<CustomAuthenticationFilter>();
         filterRegistrationBean.setOrder(6);
         filterRegistrationBean.setFilter(customAuthenticationFilter());
         filterRegistrationBean.setName("CustomAuthenticationFilter");
@@ -127,9 +127,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		return filterRegistrationBean;
     }
     
-    public static void main(String[] args) {
-    	PasswordEncoder encode = new BCryptPasswordEncoder();
-    	String pass = encode.encode("123456");
-	}
     
 }
