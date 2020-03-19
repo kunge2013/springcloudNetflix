@@ -4,14 +4,13 @@ import static com.kframe.common.RetCodes.LOGIN_FAIL;
 import static com.kframe.common.RetCodes.USER_REGISTER_FAIL;
 
 import java.io.Serializable;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
+
+import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.kframe.annotations.Comment;
@@ -21,7 +20,6 @@ import com.kframe.common.BaseService;
 import com.kframe.common.RetCodes;
 import com.kframe.common.RetResult;
 import com.kframe.entity.UserInfo;
-import com.kframe.exceptions.BizException;
 import com.kframe.repositorys.UserRepository;
 
 /**
@@ -38,7 +36,8 @@ public class AuthService extends BaseService implements IAuthSevice {
 	@Autowired
 	private UserRepository userRepository;
 
-	
+	@Resource
+	private PasswordEncoder passwordEncoder;
 	/*
 	 * @Value("${debug}") private boolean debug;
 	 */
@@ -105,7 +104,7 @@ public class AuthService extends BaseService implements IAuthSevice {
 		// todo 验证码接口验证
 		if (userRepository.countRegisterUser(mobile, nation) > 0)
 			return RetCodes.retCode(USER_REGISTER_FAIL);
-		UserInfo userinfo = new UserInfo(null, null, null, mobile, nation, null);
+		UserInfo userinfo = new UserInfo(null, passwordEncoder.encode(UserInfo.DEFAULT_PASSWORD), null, mobile, nation, null);
 		return RetResult.success(userRepository.save(userinfo));
 	}
 

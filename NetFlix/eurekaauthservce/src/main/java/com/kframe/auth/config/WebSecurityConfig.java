@@ -2,6 +2,7 @@ package com.kframe.auth.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -108,11 +109,27 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     	CustomAuthenticationFilter filter = new CustomAuthenticationFilter();
         filter.setAuthenticationSuccessHandler(authenticationSuccessHandler);
         filter.setAuthenticationFailureHandler(authenticationFailureHandler);
+       //  filter.getFilterConfig().
         filter.setFilterProcessesUrl("/login"); // 设置登陆接口名
         //这句很关键，重用WebSecurityConfigurerAdapter配置的AuthenticationManager，不然要自己组装AuthenticationManager
         filter.setAuthenticationManager(authenticationManagerBean());
         return filter;
  
     }
-	
+    
+    @Bean
+    public FilterRegistrationBean registerCustomAuthenticationFilter() throws Exception {
+    	FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
+        filterRegistrationBean.setOrder(6);
+        filterRegistrationBean.setFilter(customAuthenticationFilter());
+        filterRegistrationBean.setName("CustomAuthenticationFilter");
+        filterRegistrationBean.addUrlPatterns("/*");
+		return filterRegistrationBean;
+    }
+    
+    public static void main(String[] args) {
+    	PasswordEncoder encode = new BCryptPasswordEncoder();
+    	String pass = encode.encode("123456");
+	}
+    
 }

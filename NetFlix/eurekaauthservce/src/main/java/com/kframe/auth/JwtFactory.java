@@ -48,7 +48,8 @@ public class JwtFactory {
 			SecretKey key = generalKey();
 			Claims claims = (Claims) Jwts.parser().setSigningKey(key).parseClaimsJws(token).getBody();
 			return Optional.of(claims);
-		} catch (Exception var3) {
+		} catch (Exception e) {
+			e.printStackTrace();
 			return Optional.ofNullable(null);
 		}
 	}

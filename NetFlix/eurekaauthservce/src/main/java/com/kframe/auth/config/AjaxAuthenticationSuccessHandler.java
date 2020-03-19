@@ -1,14 +1,24 @@
 package com.kframe.auth.config;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.kframe.auth.JwtFactory;
+import com.kframe.common.RetResult;
+import com.kframe.entity.UserInfo;
 /**
  * 登陆成功 返回凭证
  * @author fk
@@ -16,18 +26,15 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class AjaxAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
+	
 	 public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-	//	        AjaxResponseBody responseBody = new AjaxResponseBody();
-	//
-	//	        responseBody.setStatus("00");
-	//	        responseBody.setMsg("登陆成功!");
-	//
-	//	        SelfUserDetails selfUserDetails = (SelfUserDetails) authentication.getPrincipal();
-	//
-	//	// 创建 token ，并返回 ，设置过期时间为 300 秒
-	//	        String jwtToken = JwtTokenUtil.generateToken(selfUserDetails.getUsername(), 300);
-	//	        responseBody.setJwtToken(jwtToken);
-
-	        response.getWriter().write(authentication.getPrincipal().toString());
+	
+		 	UserInfo userinfo = (UserInfo) authentication.getPrincipal();
+		 	String token = JwtFactory.createJWT(userinfo);
+		 	response.setCharacterEncoding("utf-8");
+		 	response.setContentType("application/json; charset=utf-8");
+		 	response.addHeader("token", token);
+		 	response.addCookie(new Cookie("token", token));
+	        response.getWriter().write(JSON.toJSONString(RetResult.success(token)));
 	    }
 }
