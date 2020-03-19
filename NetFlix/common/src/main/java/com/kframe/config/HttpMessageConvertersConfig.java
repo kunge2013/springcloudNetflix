@@ -19,12 +19,7 @@ public class HttpMessageConvertersConfig {
 	HttpMessageConverters fastJsonHttpMessageConverter() {
 		FastJsonHttpMessageConverter converter = new FastJsonHttpMessageConverter();
 		FastJsonConfig connfig = new FastJsonConfig();
-		connfig.setSerializerFeatures(
-					SerializerFeature.PrettyFormat,
-					SerializerFeature.WriteMapNullValue,//不输出为空的字段
-					SerializerFeature.WriteNullListAsEmpty,
-					SerializerFeature.NotWriteDefaultValue,
-					SerializerFeature.WriteNullStringAsEmpty);
+		connfig.setSerializerFeatures(SerializerFeature.PrettyFormat);
 		converter.setFastJsonConfig(connfig);
 		return new HttpMessageConverters(converter);
 	}
