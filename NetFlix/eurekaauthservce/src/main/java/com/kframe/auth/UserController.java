@@ -14,6 +14,7 @@ import com.kframe.annotations.Comment;
 import com.kframe.auth.service.IAuthSevice;
 import com.kframe.common.RetResult;
 import com.kframe.entity.UserInfo;
+import com.kframe.exceptions.BizException;
 
 @RestController
 public class UserController {
@@ -53,5 +54,9 @@ public class UserController {
 	public String index() {
 		return "auth-service: " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 	}
-
+	@ResponseBody
+	@GetMapping("/test")
+	public String test() {
+		throw new BizException(1000, "test exception !");
+	}
 }
