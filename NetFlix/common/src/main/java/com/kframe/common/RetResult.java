@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
+import com.kframe.exceptions.BizException;
+
 
 /**
  * 通用的结果对象，在常见的HTTP+JSON接口中返回的结果需要含结果码，错误信息，和实体对象。  <br>
@@ -136,6 +138,19 @@ public class RetResult<T> {
         return this;
     }
 
+    public static RetResult error(BizException exception) {
+    	RetResult result = new RetResult ();
+    	result.setResult(exception.getMessage());
+    	result.setRetcode(exception.getCode());
+    	return result;
+    }
+    
+    public static RetResult<Exception> error(Exception exception) {
+    	RetResult<Exception> result = new RetResult<Exception>();
+    	result.setResult(exception);
+    	result.setRetcode(-1);
+    	return result;
+    }
     /**
      * 清空attach
      *
