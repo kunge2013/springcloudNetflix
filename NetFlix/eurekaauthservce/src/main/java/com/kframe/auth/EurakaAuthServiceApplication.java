@@ -11,7 +11,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.kframe.*"})
 @EnableDiscoveryClient//服务法系发现
 @EntityScan(basePackages = "com.kframe.entity")// 扫描实体
 @EnableJpaRepositories(basePackages = "com.kframe.repositorys")// 扫描 jpa接口
