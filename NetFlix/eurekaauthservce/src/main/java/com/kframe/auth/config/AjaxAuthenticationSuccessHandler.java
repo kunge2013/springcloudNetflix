@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.annotation.Resource;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -16,7 +17,7 @@ import org.springframework.stereotype.Component;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.kframe.auth.JwtFactory;
+import com.kframe.auth.JwtService;
 import com.kframe.common.RetResult;
 import com.kframe.entity.UserInfo;
 /**
@@ -27,10 +28,13 @@ import com.kframe.entity.UserInfo;
 @Component
 public class AjaxAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
 	
+	@Resource
+	private JwtService jwtService;
+	
 	 public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
 	
 		 	UserInfo userinfo = (UserInfo) authentication.getPrincipal();
-		 	String token = JwtFactory.createJWT(userinfo);
+		 	String token = jwtService.createJWT(userinfo);
 		 	response.setCharacterEncoding("utf-8");
 		 	response.setContentType("application/json; charset=utf-8");
 		 	response.addHeader("token", token);

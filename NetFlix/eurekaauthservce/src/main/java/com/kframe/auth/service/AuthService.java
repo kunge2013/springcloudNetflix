@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 
 import com.kframe.annotations.Comment;
 import com.kframe.auth.JwtConstant;
-import com.kframe.auth.JwtFactory;
+import com.kframe.auth.JwtService;
 import com.kframe.common.BaseService;
 import com.kframe.common.RetCodes;
 import com.kframe.common.RetResult;
@@ -38,6 +38,9 @@ public class AuthService extends BaseService implements IAuthSevice {
 
 	@Resource
 	private PasswordEncoder passwordEncoder;
+	
+	@Resource
+	private JwtService jwtService;
 	/*
 	 * @Value("${debug}") private boolean debug;
 	 */
@@ -90,7 +93,7 @@ public class AuthService extends BaseService implements IAuthSevice {
 		String username = userinfo.getUsername();
 		if (!username.isEmpty() && !password.isEmpty()) {
 			if (username.equals("admin") && password.equals("123456")) {
-				String token = JwtFactory.createJWT(userinfo);
+				String token = jwtService.createJWT(userinfo);
 				saveToken(token, userinfo.getId());
 				return RetResult.success(token);
 			}

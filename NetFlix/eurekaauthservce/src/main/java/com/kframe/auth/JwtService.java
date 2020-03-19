@@ -10,6 +10,7 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
 
 import com.kframe.entity.Role;
 import com.kframe.entity.UserInfo;
@@ -25,9 +26,8 @@ import io.jsonwebtoken.SignatureAlgorithm;
  * 
  * @author fk
  */
-public class JwtFactory {
-	public JwtFactory() {
-	}
+@Component
+public class JwtService {
 
 	public static final String CLAIM_USERINFO = "USERINFO";
 
@@ -37,13 +37,13 @@ public class JwtFactory {
 	
 	public static final String audience = "098f6bcd4621d373cade4e832627b4f6";
 	
-	private static SecretKey generalKey() {
+	private  SecretKey generalKey() {
 		byte[] encodedKey = Base64.getEncoder().encode(secret.getBytes());
 		SecretKey key = new SecretKeySpec(encodedKey, 0, encodedKey.length, "AES");
 		return key;
 	}
 
-	public static Optional<Claims> parseJWT(String token) {
+	public  Optional<Claims> parseJWT(String token) {
 		try {
 			SecretKey key = generalKey();
 			Claims claims = (Claims) Jwts.parser().setSigningKey(key).parseClaimsJws(token).getBody();
@@ -60,7 +60,7 @@ public class JwtFactory {
 	 * @param token
 	 * @return
 	 */
-	public static UserInfo parseUserInfo(String token) {
+	public  UserInfo parseUserInfo(String token) {
 		Optional<Claims> optional = parseJWT(token);
 		if (optional.isPresent()) {
 			Claims claims = optional.get();
@@ -79,7 +79,7 @@ public class JwtFactory {
 	}
 
 	
-	public static String createJWT(UserInfo userinfo) {
+	public  String createJWT(UserInfo userinfo) {
 		SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
 		long nowMillis = System.currentTimeMillis();
 		Date now = new Date(nowMillis);
@@ -103,13 +103,14 @@ public class JwtFactory {
 	}
 
 	public static void main(String[] args) {
+		JwtService service = new JwtService();
 		UserInfo userinfo = new UserInfo("admin", "123456");
 		List<Role> list = new ArrayList<Role>();
 		list.add(new Role());
 		userinfo.setRoles(list);
-		String token = createJWT(userinfo);
+		String token = service.createJWT(userinfo);
 		System.out.println(token);
-		 userinfo = parseUserInfo(token);
+		userinfo = service.parseUserInfo(token);
 		System.out.println(userinfo);
 	}
 	/**
@@ -118,7 +119,7 @@ public class JwtFactory {
 	 * @param userDetails
 	 * @return
 	 */
-	   public static boolean validateToken(String token, UserDetails userDetails) {
+	   public  boolean validateToken(String token, UserDetails userDetails) {
 	        UserInfo userDetail = (UserInfo) userDetails;
 	        UserInfo userInfo = parseUserInfo(token);
 	        final long userId = userInfo.getId();
@@ -134,7 +135,7 @@ public class JwtFactory {
 	    * @param token
 	    * @return
 	    */
-	    public static Date getExpirationDateFromToken(String token) {
+	    public  Date getExpirationDateFromToken(String token) {
 	        Date expiration;
 	        try {
 	            final Claims claims = parseJWT(token).get();
@@ -145,7 +146,7 @@ public class JwtFactory {
 	        return expiration;
 	    }
 
-	    private static boolean isTokenExpired(String token) {
+	    private  boolean isTokenExpired(String token) {
 	        final Date expiration = getExpirationDateFromToken(token);
 	        return expiration.before(new Date());
 	    }
