@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.kframe.annotations.Comment;
 @Comment("自增类型 基础实体")
 @MappedSuperclass
@@ -21,6 +22,7 @@ public abstract class BaseSimpleEntity implements Serializable {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected long id;
+	
 	
 	@Column(name ="createtime", insertable = true)
 	protected long createtime;

@@ -17,6 +17,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.kframe.annotations.Comment;
 /**
  * 用戶信息
@@ -45,6 +46,7 @@ public class UserInfo extends BaseSimpleEntity implements UserDetails, Serializa
 	@Column(name ="username", length = 20)
 	public String username = "";
 
+	@JsonIgnore
 	@Column(name ="password", length = 255)
 	public String password = "";
 
