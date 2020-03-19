@@ -17,6 +17,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.kframe.annotations.Comment;
 /**
@@ -47,6 +48,7 @@ public class UserInfo extends BaseSimpleEntity implements UserDetails, Serializa
 	public String username = "";
 
 	@JsonIgnore
+	@JSONField(serialize = false)
 	@Column(name ="password", length = 255)
 	public String password = "";
 
