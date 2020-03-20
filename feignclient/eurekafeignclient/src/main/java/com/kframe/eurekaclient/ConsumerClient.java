@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @FeignClient("eurekaclient")
 public interface ConsumerClient {
-	
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	String home();
+	public String home();
 }
