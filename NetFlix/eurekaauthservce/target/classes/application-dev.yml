@@ -1,0 +1,75 @@
+eureka:
+  client:
+#    自动刷新eureka配置
+    refresh:
+      enable: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+    register-with-eureka: true
+    
+  instance:
+    status-page-url:  ${server.servletPath}/info1
+    home-page-url: ${server.servletPath}/health1
+    
+spring:
+  application:
+    name: authservice
+  datasource:
+    name: eurekaauth
+    url:  jdbc:mysql://localhost:3306/eurekaauth?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=TRUE&serverTimezone=UTC&allowMultiQueries=true
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    #druid相关配置
+    druid:
+      #监控统计拦截的filters
+      filters: stat
+      #配置初始化大小/最小/最大
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      #获取连接等待超时时间
+      max-wait: 60000
+      #间隔多久进行一次检测，检测需要关闭的空闲连接
+      time-between-eviction-runs-millis: 300000
+      validation-query: SELECT 'x'
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      #打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
+      pool-prepared-statements: false
+      max-pool-prepared-statement-per-connection-size: 20
+
+
+##JPA 配置
+  jpa:
+    show-sql: true
+    # 指定生成表名的存储引擎为InnoDBD
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+   
+
+# 服务端口配置
+server:
+  port: 7001  
+ 
+ 
+  ## 日志级别设置  
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG
+    org.springframework.http.HttpLogging:  DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: DEBUG
+    com.kframe: DEBUG
+    
+#jwt 认证头配置    
+jwt:  
+  header: token
+    
+    
