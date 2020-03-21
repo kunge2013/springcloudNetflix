@@ -20,6 +20,8 @@ public class RetCodes {
 	@Comment("用户不存在")
 	public static final int USER_NOT_EXIST = 20001;
 	
+	@Comment("校验码生成失败")
+	public static final int VERIFY_CODE_CREATE_ERROR = 30001;
 	/**
 	 * 錯誤嗎
 	 * @param retcode

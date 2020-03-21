@@ -5,7 +5,9 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 /**
  * 角色表
@@ -29,7 +31,23 @@ public class Role extends BaseSimpleEntity {
     @ManyToMany(mappedBy = "roles",fetch = FetchType.EAGER)
     private List<Authority> authoritys;
 
-	public String getName() {
+    @OneToOne(fetch = FetchType.LAZY)  
+    @JoinColumn(name="updateuser")  
+    public UserInfo updateuser;
+    
+    
+    public UserInfo getUpdateuser() {
+		return updateuser;
+	}
+
+	public void setUpdateuser(UserInfo updateuser) {
+		this.updateuser = updateuser;
+	}
+
+	/**
+     * 更新用户
+     */
+    public String getName() {
 		return name;
 	}
 
@@ -53,6 +71,9 @@ public class Role extends BaseSimpleEntity {
 	public void setAuthoritys(List<Authority> authoritys) {
 		this.authoritys = authoritys;
 	}
+	
+	
+	
 
 	public Role() {
 		// TODO Auto-generated constructor stub
