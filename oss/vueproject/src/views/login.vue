@@ -14,6 +14,8 @@
             <el-input type="text" v-model="ruleForm.code" auto-complete="off" placeholder="图形验证码" @keyup.enter.native="submitForm('ruleForm')"></el-input>
           </el-form-item>
         </el-col>
+
+     
         <el-col :span="12" class="code-box">
           <img :src="ruleForm.codeimg" alt="" class="codeimg" @click="getcode()">
         </el-col>
@@ -26,7 +28,7 @@
   </div>
 </template>
 <script type="text/ecmascript-6">
-import { login } from '../api/userMG'
+import { login , verifycode } from '../api/userMG'
 import { setCookie, getCookie, delCookie } from '../utils/util'
 import md5 from 'js-md5'
 export default {
@@ -67,6 +69,12 @@ export default {
   },
   // 里面的函数只有调用才会执行
   methods: {
+    getcode() {
+      debugger;
+      verifycode().then( res => {
+          this.ruleForm.codeimg = res.result.base64image;
+      });
+    },
     // 获取用户名密码
     getuserpwd() {
       if (getCookie('user') != '' && getCookie('pwd') != '') {

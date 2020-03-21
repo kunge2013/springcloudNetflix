@@ -8,6 +8,9 @@ export const menu = (params) => { return axios.get("/api/menu?&token=" + localSt
 // 退出接口
 export const loginout = () => { return axios.delete("/api/login?&token=" + localStorage.getItem('logintoken')).then(res => res.data) };
 
+export  const verifycode = () => {return  axios.get("/api/verifyCode" ).then(res => {console.log(res); return res.data}) };
+
+
 /**
  * 用户管理 
  **/
