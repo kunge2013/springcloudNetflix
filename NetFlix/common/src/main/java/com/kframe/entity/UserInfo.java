@@ -76,6 +76,13 @@ public class UserInfo extends BaseSimpleEntity implements UserDetails, Serializa
             inverseJoinColumns = {@JoinColumn(name = "ROLE_ID", referencedColumnName = "ID")})
     public List<Role> roles;
 
+    @Comment("邮箱")
+	@Column(name = "email")
+    public String email;
+    
+    @Comment("用户状态 2 启用 4 禁用 ")
+	@Column(name = "status")
+    private short status;
     
 	public short getSex() {
 		return sex;
