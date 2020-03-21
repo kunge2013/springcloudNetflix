@@ -14,6 +14,7 @@ import com.kframe.annotations.Comment;
 import com.kframe.auth.service.IAuthSevice;
 import com.kframe.common.RetResult;
 import com.kframe.entity.UserInfo;
+import com.kframe.entity.VerifyCode;
 import com.kframe.exceptions.BizException;
 
 @RestController
@@ -54,6 +55,15 @@ public class UserController {
 	public String index() {
 		return "auth-service: " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 	}
+	
+	@Comment("校验码生成")
+	@ResponseBody
+	@GetMapping("/api/verifyCode")
+	public RetResult<VerifyCode> generVerifyCode() {
+		return authService.generVerifyCode();	
+	}
+	
+	
 	@ResponseBody
 	@GetMapping("/test")
 	public String test() {

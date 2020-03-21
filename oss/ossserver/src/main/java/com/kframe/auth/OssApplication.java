@@ -17,10 +17,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableJpaRepositories(basePackages = "com.kframe.repositorys")// 扫描 jpa接口
 //@EnableAutoConfiguration(exclude = {SecurityAutoConfiguration.class}) //取消spring 权限框架扫描
 @EnableTransactionManagement // 开启事物
-public class EurakaAuthServiceApplication {
+public class OssApplication {
 
-	static final Logger LOGGER = LoggerFactory.getLogger(EurakaAuthServiceApplication.class);
+	static final Logger LOGGER = LoggerFactory.getLogger(OssApplication.class);
     public static void main(String[] args) {
-    	SpringApplication.run(EurakaAuthServiceApplication.class);
+    	SpringApplication.run(OssApplication.class);
     }
 }

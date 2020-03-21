@@ -9,6 +9,7 @@ import com.kframe.entity.UserInfo;
  * @author fk
  *
  */
+import com.kframe.entity.VerifyCode;
 public interface IAuthSevice {
 	
 	/**
@@ -34,5 +35,11 @@ public interface IAuthSevice {
 	 * @return
 	 */
 	public RetResult<UserInfo> register(int nation, String mobile, String verifycode);
+
+	/**
+	 * 生成验证码
+	 * @return
+	 */
+	public RetResult<VerifyCode> generVerifyCode();
 	
 }

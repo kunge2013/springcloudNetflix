@@ -48,6 +48,10 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 		String username = "";
 		UserInfo userinfo = null;
 		LOGGER.info("headers  {}  , auth = {} ", request.getHeaderNames(), auth);
+		if ("/api/verifyCode".equalsIgnoreCase(url)) {
+			chain.doFilter(request, response);//放行
+			return;
+		}
 		if (!auth.isEmpty()) {
 			userinfo = jwtService.parseUserInfo(auth);
 			username = userinfo.getUsername();
