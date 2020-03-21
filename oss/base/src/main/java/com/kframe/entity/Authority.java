@@ -19,7 +19,6 @@ import com.kframe.annotations.Comment;
 @Table(name = "Authority")
 @Comment("菜单权限配置表")
 public class Authority extends BaseSimpleEntity {
-
 	/**
 	 * 
 	 */
